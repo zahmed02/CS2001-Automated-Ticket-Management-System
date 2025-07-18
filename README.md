@@ -89,21 +89,18 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
   - Print full resolution log
 
 ### 4. Thread Safety with Mutexes
-- Mutex Integration
+- **Mutex Integration**:
   - `mutex` is declared in PendingTicketsQueue as `mutable mutex mtx`
   - Used in all public methods to protect heap operations
-
-- Lock Management
+- **Lock Management**:
   - `lock_guard` automatically locks/unlocks mutexes using RAII (Resource Acquisition Is Initialization)
   - Ensures exception-safe unlocking even if operations throw errors
-
-- Protected Operations
-  - **Following methods in `PendingTicketsQueue` are thread-safe:**
-    - `enqueueTicket()`: Safely adds tickets to the heap
-    - `dequeueTicket()`: Safely removes highest-priority ticket
-    - `peekFront()`/`peekBack()`: Safe priority inspection
-    - `displayQueue()`: Thread-safe snapshot of pending tickets
-    - `isEmpty()`: Atomic queue status check
+- **Protected Operations**:
+  - `enqueueTicket()`: Safely adds tickets to the heap
+  - `dequeueTicket()`: Safely removes highest-priority ticket
+  - `peekFront()`/`peekBack()`: Safe priority inspection
+  - `displayQueue()`: Thread-safe snapshot of pending tickets
+  - `isEmpty()`: Atomic queue status check
 
 ### 5. Configuration Management
 - External file: `ONESTOPMS.conf`
