@@ -10,7 +10,7 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
 - **Configuration Management** through an external `.conf` file
 - **Fast Lookups** via hash tables and an AVL tree for range queries
 
-## Project Structure & Blueprint
+## Project Blueprint & Framework
 ![Mermaid Diagram](./deepseek_mermaid_20250718_98e94c.png)
 ---
 ![Mermaid Diagram](./deepseek_mermaid_20250718_939f5c.png)
