@@ -88,7 +88,15 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
   - Peek most recent resolution
   - Print full resolution log
 
-### 4. Configuration Management
+### 4. Thread Safety with Mutexes
+#### Mutex-Protected Operations:
+- Implements `std::mutex` in PendingTicketsQueue to ensure thread-safe access during:
+  - Enqueue/dequeue operations
+  - Priority heap modifications
+  - Queue status checks (`peekFront()`, `isEmpty()`, etc)
+  - Uses `lock_guard` for automatic RAII-based locking/unlocking.
+
+### 5. Configuration Management
 - External file: `ONESTOPMS.conf`
 - **Parameters**:
   - `threshold`: number of items to switch sort algorithm
@@ -97,7 +105,7 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
 - Load on start; save on change
 - Default: `quick` for large, `insertion` for small, threshold = 10
 
-### 5. Search & Reporting
+### 6. Search & Reporting
 - **HashTableByID**: O(1) lookup of tickets by integer ID
 - **HashTableByName**: O(1) lookup by customer name
 - **AVLTree**: balanced BST on Ticket ID for range queries
@@ -105,7 +113,7 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
   - Search by ID, name, or ID range
   - Display AVL range query results
 
-### 6. Sorting & Analysis Reports
+### 7. Sorting & Analysis Reports
 - Tickets and agents can both be sorted via configurable algorithms  
 - Measures and reports sort duration in milliseconds  
-- Sorting algorithms implemented for each DS (see table below)
+- Sorting algorithms implemented for each DS (see table above)
