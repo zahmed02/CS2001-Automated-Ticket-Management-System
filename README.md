@@ -98,7 +98,7 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
   - Ensures exception-safe unlocking even if operations throw errors
 
 - Protected Operations
-  - Following methods in `PendingTicketsQueue` are thread-safe:
+  - **Following methods in `PendingTicketsQueue` are thread-safe:**
     - `enqueueTicket()`: Safely adds tickets to the heap
     - `dequeueTicket()`: Safely removes highest-priority ticket
     - `peekFront()`/`peekBack()`: Safe priority inspection
