@@ -11,7 +11,7 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
 - **Fast Lookups** via hash tables and an AVL tree for range queries
 
 ## Project Blueprint & Framework
-### Administrative & User Control Console Architecture
+### Administrative & User Control Panel
 ![Mermaid Diagram](./deepseek_mermaid_20250718_98e94c.png)
 ---
 ### Data Structures & Class Composition Specification
