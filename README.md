@@ -89,8 +89,8 @@ The **Automated Ticket Management System (ATMS)** is a comprehensive service req
   - Print full resolution log
 
 ### 4. Thread Safety with Mutexes
-#### Mutex-Protected Operations:
-- Implements `std::mutex` in PendingTicketsQueue to ensure thread-safe access during:
+- Mutex-Protected Operations:
+  - Implements `std::mutex` in PendingTicketsQueue to ensure thread-safe access during:
   - Enqueue/dequeue operations
   - Priority heap modifications
   - Queue status checks (`peekFront()`, `isEmpty()`, etc)
