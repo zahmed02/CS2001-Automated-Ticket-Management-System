@@ -1,7 +1,7 @@
-# CS2001 Automated Ticket Management System
+# Automated Ticket Management System
 
 ## Course: CS2001 Data Structures & Algorithms
-## Instructor & Project Supervisor: Miss Ayesha Ali
+## Instructor: Miss Ayesha Ali
 
 ## Overview
 The **Automated Ticket Management System (ATMS)** is a comprehensive service request and agent management application designed to efficiently handle tickets from creation through resolution. Built in C++, it leverages multiple Data Structures & Algorithms (DSA) to provide fast operations for ticket creation, searching, sorting, assignment, and resolution. Key components include:
